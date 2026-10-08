@@ -34,7 +34,6 @@ public class MiscUtils {
         }
     }
 
-    // TODO: Refactor
     public static boolean checkHeldItem(ItemStack heldItemStack, BlockState stateSchematic) {
         Item heldItem = heldItemStack.getItem();
         boolean match = false;
