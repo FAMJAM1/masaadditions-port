@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.awt.Color;
 
 // The renderer asks the block colours for a tint here, before any provider is
-// looked up, so leaves without one of their own are caught as well.
+// looked up, so leaves without one of their own are caught as well
 @Mixin(BlockColors.class)
 public class MixinBlockColors {
     // From UsefulMod by nessie

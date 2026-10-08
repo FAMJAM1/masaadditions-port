@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 // The particles thrown off a block while it is being hit. On this line the level
-// still asks the particle engine for them, so the tweak stops it here.
+// still asks the particle engine for them, so the tweak stops it here
 @Mixin(ParticleEngine.class)
 public class MixinParticleEngine {
     @Inject(method = "crack", at = @At("HEAD"), cancellable = true)

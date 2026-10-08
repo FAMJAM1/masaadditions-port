@@ -20,7 +20,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 // Breaking a block is a level event now instead of a call into the particle
-// engine, so the tweak intercepts the event before vanilla spawns anything.
+// engine, so the tweak intercepts the event before vanilla spawns anything
 @Mixin(LevelEventHandler.class)
 public class MixinParticleManager {
     @Unique
