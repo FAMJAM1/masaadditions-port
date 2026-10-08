@@ -29,7 +29,7 @@ logoFile = "masaadditions-icon.png"
 
 # The four below are each pinned to the oldest release of their 1.21.3 line that
 # this was built and checked against. Their method signatures move from release to
-# release, so an older one would load and then miss its hooks.
+# release, so an older one would load and then miss its hooks
 [[dependencies.masaadditions]]
     modId = "mafglib"
     type = "required"

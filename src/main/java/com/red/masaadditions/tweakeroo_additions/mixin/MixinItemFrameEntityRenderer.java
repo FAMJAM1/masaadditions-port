@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 // The frame border is skipped for a frame that is invisible, so the tweak answers
 // that question instead of touching the drawing itself. The contents are submitted
-// further along and are left alone.
+// further along and are left alone
 @Mixin(value = ItemFrameRenderer.class)
 public class MixinItemFrameEntityRenderer {
     @Redirect(method = "render(Lnet/minecraft/client/renderer/entity/state/ItemFrameRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V",
