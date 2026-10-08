@@ -15,7 +15,7 @@ import java.util.List;
 
 // Colouring is a source per block now, and foliage brings its own, so overriding
 // the shared one reaches nothing. This swaps the source itself: it is where the
-// game and any renderer replacing it both come to ask, so one hook covers both.
+// game and any renderer replacing it both come to ask, so one hook covers both
 @Mixin(BlockColors.class)
 public class MixinBlockColors {
     @Inject(method = "getTintSources", at = @At("RETURN"), cancellable = true)

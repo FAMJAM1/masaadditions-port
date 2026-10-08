@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 // Sun, moon, fog and the clock item all read a keyframe track sampled at whatever
 // the world clock reports, so the override sits on the client's own clock: the
-// server's copy is untouched and only the overworld clock is redirected.
+// server's copy is untouched and only the overworld clock is redirected
 @Mixin(ClientClockManager.class)
 public class MixinWorldAccess {
     @Inject(method = "getTotalTicks", at = @At("HEAD"), cancellable = true)

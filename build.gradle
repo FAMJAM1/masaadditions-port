@@ -27,10 +27,10 @@ repositories {
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     // No mappings: the game ships unobfuscated from 26.1 on. loom-no-remap does
-    // not register the mod* configurations either, so these are plain ones.
+    // not register the mod* configurations either, so these are plain ones
     implementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-    // The mods this one extends. Compile only: the player installs them separately.
+    // The mods this one extends. Compile only: the player installs them separately
     compileOnly "maven.modrinth:malilib:${project.malilib_version}"
     compileOnly "maven.modrinth:litematica:${project.litematica_version}"
     compileOnly "maven.modrinth:tweakeroo:${project.tweakeroo_version}"
