@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 // The frame border is drawn only when its model is not empty. Claiming it is
-// empty hides the border and leaves the contents alone.
+// empty hides the border and leaves the contents alone
 @Mixin(value = ItemFrameRenderer.class)
 public class MixinItemFrameEntityRenderer {
     @Redirect(method = "submit(Lnet/minecraft/client/renderer/entity/state/ItemFrameRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;Lnet/minecraft/client/renderer/state/level/CameraRenderState;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/block/BlockModelRenderState;isEmpty()Z"))
