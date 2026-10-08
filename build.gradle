@@ -31,7 +31,7 @@ dependencies {
     mappings loom.officialMojangMappings()
     neoForge "net.neoforged:neoforge:${project.neoforge_version}"
 
-    // The mods this one extends. Compile only: the player installs them separately.
+    // The mods this one extends. Compile only: the player installs them separately
     compileOnly "maven.modrinth:mafglib:${project.mafglib_version}"
     compileOnly "maven.modrinth:forgematica:${project.forgematica_version}"
     compileOnly "maven.modrinth:tweakerge:${project.tweakerge_version}"

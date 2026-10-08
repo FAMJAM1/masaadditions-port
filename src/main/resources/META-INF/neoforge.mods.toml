@@ -28,7 +28,7 @@ logoFile = "masaadditions-icon.png"
     side = "CLIENT"
 
 # 0.4.5 hooks a call the game no longer makes inside Language.loadFromJson, which
-# NeoForge rerouted, and the game dies on it. The gap holds that release out.
+# NeoForge rerouted, and the game dies on it. The gap holds that release out
 [[dependencies.masaadditions]]
     modId = "mafglib"
     type = "required"
@@ -37,7 +37,7 @@ logoFile = "masaadditions-icon.png"
     side = "CLIENT"
 
 # 0.4.3 needs a malilib class that arrived only in MaFgLib 0.4.5, and that release
-# is held out above, so the pair cannot be satisfied. The gap holds it out too.
+# is held out above, so the pair cannot be satisfied. The gap holds it out too
 [[dependencies.masaadditions]]
     modId = "forgematica"
     type = "optional"

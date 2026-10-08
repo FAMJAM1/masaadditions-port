@@ -12,7 +12,7 @@ import java.util.function.LongSupplier;
 /**
  * Sun, moon, fog and sky colour are all keyframe tracks sampled at whatever the day
  * time supplier reports, so the override is given to the supplier rather than to any
- * one of the things that read it.
+ * one of the things that read it
  */
 @Mixin(AttributeTrackSampler.class)
 public class MixinWorldAccess {
