@@ -18,7 +18,7 @@ public interface MixinWorldAccess extends CommonLevelAccessor, LevelTimeAccess, 
 
     /**
      * @author Red.#9015
-     * @reason Isn't possible to inject into interfaces. Overwrite shouldn't affect most other mods though.
+     * @reason Isn't possible to inject into interfaces. Overwrite shouldn't affect most other mods though
      */
     @Overwrite()
     default long dayTime() {

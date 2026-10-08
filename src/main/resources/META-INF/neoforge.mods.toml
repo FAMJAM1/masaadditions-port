@@ -29,7 +29,7 @@ logoFile = "masaadditions-icon.png"
 
 # The four below are each pinned to the oldest release of their 1.21.8 line that
 # this was built and checked against. Their method signatures move from release to
-# release, so an older one would load and then miss its hooks.
+# release, so an older one would load and then miss its hooks
 [[dependencies.masaadditions]]
     modId = "mafglib"
     type = "required"
@@ -37,10 +37,10 @@ logoFile = "masaadditions-icon.png"
     ordering = "NONE"
     side = "CLIENT"
 
-# 0.4.3 and 0.4.4 ship this line with one mixin selector left un-remapped -- a
+# 0.4.3 and 0.4.4 ship this line with one mixin selector left un-remapped; a
 # lambda inside the level renderer, which no mapping table names. That mixin is
 # required, so those two take the game down at startup on their own. The gap
-# holds them out and leaves room for a later fix.
+# holds them out and leaves room for a later fix
 [[dependencies.masaadditions]]
     modId = "forgematica"
     type = "optional"

@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 // Cloud height is an environment attribute passed to the renderer now, not a
-// constant baked into the dimension, so the override lands on the argument.
+// constant baked into the dimension, so the override lands on the argument
 @Mixin(CloudRenderer.class)
 public class MixinDimensionEffects {
     @ModifyVariable(method = "render", at = @At("HEAD"), argsOnly = true, ordinal = 0)
