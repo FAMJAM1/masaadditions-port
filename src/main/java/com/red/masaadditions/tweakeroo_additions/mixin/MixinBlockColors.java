@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.awt.Color;
 
 // Foliage now carries its own tint source that overrides the shared one, so the
-// colour is taken over where the renderer asks for it instead.
+// colour is taken over where the renderer asks for it instead
 @Mixin(ModelBlockRenderer.class)
 public class MixinBlockColors {
     // From UsefulMod by nessie

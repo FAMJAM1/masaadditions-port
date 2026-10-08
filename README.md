@@ -14,11 +14,11 @@ and every file is also on [Modrinth](https://modrinth.com/mod/masaadditions-port
 
 The source is kept one branch per version line and loader — `fabric-1.21.11`,
 `neoforge-1.21.8` and so on, with `fabric` and `main` holding the 26.1 line.
-This branch is the 26.1 NeoForge build; the scripts in [tools/](tools) live here.
+This branch is the 26.1 NeoForge build.
 
 Исходники разложены по ветке на линию версий и загрузчик: `fabric-1.21.11`,
 `neoforge-1.21.8` и так далее, а `fabric` и `main` — линия 26.1. На этой ветке
-лежит сборка 26.1 под NeoForge и скрипты в [tools/](tools).
+лежит сборка 26.1 под NeoForge.
 
 [English](#english) · [Русский](#русский)
 
@@ -76,14 +76,7 @@ This is a client mod; the server does not need it.
 ```
 
 The jar lands in `build/libs/`. Gradle fetches the JDK itself, so nothing needs
-installing by hand. Check the result before shipping it:
-
-```
-tools/mixinaudit.py build/devlibs/<jar>-dev.jar <the classpath it will run on>
-```
-
-Mixins are not checked by the compiler; that script reports the targets that
-will not resolve at runtime.
+installing by hand.
 
 ---
 
@@ -139,14 +132,7 @@ will not resolve at runtime.
 ```
 
 Джарник появится в `build/libs/`. JDK Gradle скачает сам, ставить руками ничего
-не нужно. Перед выкладкой стоит проверить результат:
-
-```
-tools/mixinaudit.py build/devlibs/<джарник>-dev.jar <classpath, на котором он побежит>
-```
-
-Компилятор миксины не проверяет; скрипт показывает цели, которые не найдутся
-во время работы.
+не нужно.
 
 ---
 

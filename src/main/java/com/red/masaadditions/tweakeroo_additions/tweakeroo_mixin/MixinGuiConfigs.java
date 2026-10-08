@@ -26,7 +26,7 @@ public class MixinGuiConfigs {
 
     // The Tweaks tab and the combined "All" tab both wrap the base toggle list through
     // the same stream, so the extra toggles are appended there rather than at each of
-    // the call sites that consume the result.
+    // the call sites that consume the result
     @Redirect(method = {"getConfigs", "getAllConfigs"}, at = @At(value = "INVOKE", target = "Ljava/util/stream/Stream;map(Ljava/util/function/Function;)Ljava/util/stream/Stream;"))
     private Stream<BooleanHotkeyGuiWrapper> appendExtraTweaks(Stream<FeatureToggle> toggles, Function<FeatureToggle, BooleanHotkeyGuiWrapper> wrapper) {
         return Stream.concat(toggles.map(wrapper), EXTRA_TOGGLES.stream().map(this::wrapExtraConfig));
