@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 public class MixinBlockItem {
     // No slice: the context is stored before getPlacementState is called, so a slice
     // starting there leaves nothing to modify. The ordinal stays, since the method holds
-    // two contexts of its own -- the parameter and the updated one this wants.
+    // two contexts of its own; the parameter and the updated one this wants
     @ModifyVariable(method = "place(Lnet/minecraft/item/ItemPlacementContext;)Lnet/minecraft/util/ActionResult;", ordinal = 1, at = @At(value = "STORE", ordinal = 0))
     private ItemPlacementContext modifyPlacementContext(ItemPlacementContext context) {
         boolean useReplacementMode = HotkeysExtended.REPLACEMENT_MODE.getKeybind().isKeybindHeld()
@@ -36,7 +36,8 @@ public class MixinBlockItem {
         if (player == null) {
             return false;
         }
-        // something that works for both the client player and the server version of the client player
+        // Something that works for both the client player and the server version of
+        // the client player
         return player.getUuid().equals(MinecraftClient.getInstance().player.getUuid());
     }
 }

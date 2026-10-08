@@ -52,7 +52,7 @@ public abstract class GuiFileImportBase extends GuiSchematicBrowserBase implemen
         WidgetFileBrowserBase.DirectoryEntry entry = this.getListWidget().getLastSelectedEntry();
 
         // Only set the text field contents if it hasn't been set already.
-        // This prevents overwriting any user input text when switching to a newly created directory.
+        // This prevents overwriting any user input text when switching to a newly created directory
         if (this.lastText.isEmpty()) {
             if (entry != null && entry.getType() != WidgetFileBrowserBase.DirectoryEntryType.DIRECTORY && entry.getType() != WidgetFileBrowserBase.DirectoryEntryType.INVALID) {
                 this.setTextFieldText(FileUtils.getNameWithoutExtension(entry.getName()));

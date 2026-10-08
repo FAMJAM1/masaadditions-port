@@ -35,7 +35,7 @@ logoFile = "masaadditions-icon.png"
 
 # 0.4.2 ships an access widener for BufferBuilder.building, a Fabric format that
 # nothing on 1.21.1 can apply, and schematic rendering dies on the field being
-# private. The gap holds that one release out whilst leaving later ones welcome.
+# private. The gap holds that one release out whilst leaving later ones welcome
 [[dependencies.masaadditions]]
     modId = "forgematica"
     type = "optional"
