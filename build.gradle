@@ -1,5 +1,5 @@
 plugins {
-    // 1.21.11 still ships obfuscated, so the real plugin is needed: it remaps
+    // 1.21.8 still ships obfuscated, so the real plugin is needed: it remaps
     // this mod on the way out and masa's mods on the way in
     id 'dev.architectury.loom' version '1.17.491'
     id 'maven-publish'
@@ -31,7 +31,7 @@ dependencies {
     mappings loom.officialMojangMappings()
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-    // The mods this one extends. Compile only: the player installs them separately.
+    // The mods this one extends. Compile only: the player installs them separately
     modCompileOnly "maven.modrinth:malilib:${project.malilib_version}"
     modCompileOnly "maven.modrinth:litematica:${project.litematica_version}"
     modCompileOnly "maven.modrinth:tweakeroo:${project.tweakeroo_version}"
@@ -54,7 +54,7 @@ processResources {
 
 tasks.withType(JavaCompile).configureEach {
     it.options.encoding = "UTF-8"
-    // Minecraft 1.21.11 runs on Java 21
+    // Minecraft 1.21.8 runs on Java 21
     it.options.release = 21
     // Default is 100, which hides how much of the port is left
     it.options.compilerArgs << '-Xmaxerrs' << '2000'
