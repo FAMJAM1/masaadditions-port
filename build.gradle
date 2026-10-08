@@ -1,5 +1,5 @@
 plugins {
-    // The plain loom here, not the no-remap fork: 1.21.11 is still obfuscated
+    // The plain loom here, not the no-remap fork: 1.21.10 is still obfuscated
     id 'dev.architectury.loom' version '1.17.491'
     id 'maven-publish'
 }
@@ -27,11 +27,11 @@ repositories {
 
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    // 1.21.11 is still obfuscated, and NeoForge runs on Mojang names
+    // 1.21.10 is still obfuscated, and NeoForge runs on Mojang names
     mappings loom.officialMojangMappings()
     neoForge "net.neoforged:neoforge:${project.neoforge_version}"
 
-    // The mods this one extends. Compile only: the player installs them separately.
+    // The mods this one extends. Compile only: the player installs them separately
     compileOnly "maven.modrinth:mafglib:${project.mafglib_version}"
     compileOnly "maven.modrinth:forgematica:${project.forgematica_version}"
     compileOnly "maven.modrinth:tweakerge:${project.tweakerge_version}"
@@ -52,7 +52,7 @@ processResources {
 
 tasks.withType(JavaCompile).configureEach {
     it.options.encoding = "UTF-8"
-    // 1.21.11 runs on Java 21; 26.1 and later moved to 25
+    // 1.21.10 runs on Java 21; 26.1 and later moved to 25
     it.options.release = 21
     // Default is 100, which hides how much of the port is left
     it.options.compilerArgs << '-Xmaxerrs' << '2000'

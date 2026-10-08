@@ -36,7 +36,8 @@ public class MixinBlockItem {
         if (player == null) {
             return false;
         }
-        // something that works for both the client player and the server version of the client player
+        // Something that works for both the client player and the server version of
+        // the client player
         return player.getUUID().equals(Minecraft.getInstance().player.getUUID());
     }
 }

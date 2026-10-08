@@ -29,7 +29,7 @@ logoFile = "masaadditions-icon.png"
 
 # The four below are each pinned to the oldest release of their 1.21.10 line that
 # this was built and checked against. Their method signatures move from release to
-# release, so an older one would load and then miss its hooks.
+# release, so an older one would load and then miss its hooks
 [[dependencies.masaadditions]]
     modId = "mafglib"
     type = "required"
@@ -39,7 +39,7 @@ logoFile = "masaadditions-icon.png"
 
 # 0.4.5 ships this line with its metadata URLs left as build placeholders, and
 # the loader rejects the file outright before any mod gets to load. The gap holds
-# it out and leaves room for a fix above.
+# it out and leaves room for a fix above
 [[dependencies.masaadditions]]
     modId = "forgematica"
     type = "optional"
