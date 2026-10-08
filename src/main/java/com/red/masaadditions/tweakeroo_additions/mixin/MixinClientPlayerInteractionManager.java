@@ -86,7 +86,7 @@ public abstract class MixinClientPlayerInteractionManager {
     }
 
     // The packet is built in a lambda inside useItemOn, and its number shifts
-    // between game versions -- here it is the fifth
+    // between game versions; here it is the fifth
     @Inject(method = "lambda$useItemOn$4", at = @At("HEAD"))
     private void resetReplacementModeFlag(CallbackInfoReturnable<Packet<?>> cir) {
         PlacementTweaks.replacementModeUseStack = null;

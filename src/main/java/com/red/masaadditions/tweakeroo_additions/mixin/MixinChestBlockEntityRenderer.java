@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 // The renderer decides the festive texture once, up front, instead of passing a
-// flag down to the texture lookup, so the answer is overridden at the source.
+// flag down to the texture lookup, so the answer is overridden at the source
 @Mixin(ChestRenderer.class)
 public class MixinChestBlockEntityRenderer {
     @Inject(method = "xmasTextures", at = @At("HEAD"), cancellable = true)
