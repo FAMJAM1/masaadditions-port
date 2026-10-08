@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-// The layer draws one arrow per count, so reporting none is enough to hide them.
+// The layer draws one arrow per count, so reporting none is enough to hide them
 @Mixin(ArrowLayer.class)
 public abstract class MixinStuckArrowsFeatureRenderer {
     @Inject(method = "numStuck", at = @At("HEAD"), cancellable = true)

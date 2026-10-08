@@ -31,7 +31,7 @@ dependencies {
     mappings loom.officialMojangMappings()
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-    // The mods this one extends. Compile only: the player installs them separately.
+    // The mods this one extends. Compile only: the player installs them separately
     modCompileOnly "maven.modrinth:malilib:${project.malilib_version}"
     modCompileOnly "maven.modrinth:litematica:${project.litematica_version}"
     modCompileOnly "maven.modrinth:tweakeroo:${project.tweakeroo_version}"
