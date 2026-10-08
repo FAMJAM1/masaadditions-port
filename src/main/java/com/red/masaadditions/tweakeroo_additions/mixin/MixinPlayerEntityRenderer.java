@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 // Rendering runs off extracted state now, so the player is marked unseen while
-// the state is built and the renderer's own invisibility path skips it.
+// the state is built and the renderer's own invisibility path skips it
 @Mixin(AvatarRenderer.class)
 public class MixinPlayerEntityRenderer {
     @Inject(method = "extractRenderState(Lnet/minecraft/world/entity/Avatar;Lnet/minecraft/client/renderer/entity/state/AvatarRenderState;F)V", at = @At("RETURN"))

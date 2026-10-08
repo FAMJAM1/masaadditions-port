@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 // Being equippable is a data component now, so the swap this tweak overrides sits
-// on Equippable rather than on the item.
+// on Equippable rather than on the item
 @Mixin(Equippable.class)
 public abstract class MixinEquipment {
     @Shadow
